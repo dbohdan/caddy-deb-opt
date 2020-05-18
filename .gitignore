@@ -1,0 +1,3 @@
+*.deb
+/debian/opt/caddy/bin/caddy
+/README.html

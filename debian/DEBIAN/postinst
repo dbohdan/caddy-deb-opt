@@ -1,0 +1,15 @@
+systemctl daemon-reload
+
+groupadd --system caddy || true
+useradd \
+    --system \
+    --gid caddy \
+    --create-home \
+    --home-dir /var/opt/caddy \
+    --shell /usr/sbin/nologin \
+    --comment "Caddy web server" \
+    caddy \
+    || true
+
+systemctl enable caddy
+systemctl restart caddy
