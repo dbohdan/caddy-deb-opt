@@ -1,5 +1,11 @@
 # caddy-deb-opt
 
+## This package is deprecated
+
+Caddy [releases](https://github.com/caddyserver/caddy/releases) now include deb packages, and Debian [will likely soon start packaging](https://wiki.debian.org/SummerOfCode2021/ApprovedProjects/PackagingCaddy) Caddy.
+
+## About
+
 This project builds a [Caddy](https://caddyserver.com/) deb package for Debian and Ubuntu.  The package installs Caddy to `/opt/caddy/`.  It sets up Caddy to look for configuration ([Caddyfiles](https://caddyserver.com/docs/caddyfile)) in `/etc/opt/caddy/Caddyfile.d/*.conf` and to store variable data like Let's Encrypt certificates in `/var/opt/caddy/`.
 
 The package assumes you are going to configure Caddy though Caddyfiles, not the API.  This is why it does not start Caddy with `--resume`.
